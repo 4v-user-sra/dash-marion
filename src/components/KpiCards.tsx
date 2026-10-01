@@ -20,7 +20,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
             Valor em Orçamentos
           </span>
           <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#F4EDE4] text-[#8C6D38] border border-[#DCD2C6]">
-            30 dias
+            Últimos 30 Dias
           </span>
         </div>
 
@@ -31,7 +31,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
         </div>
 
         <div className="mt-1.5 flex items-center justify-between text-xs text-[#5A483E] pt-1.5 border-t border-[#F0E9E1]">
-          <span className="truncate text-[11px] font-semibold">{formatCurrency(kpi.orcamentosEnviadosValor)}</span>
+          <span className="truncate text-[11px] font-semibold">{formatCurrency(kpi.orcamentosEnviadosValor)} nos últimos 30 dias</span>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
             Leads Qualificados
           </span>
           <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#F4EDE4] text-[#46664B] border border-[#DCD2C6]">
-            Orç. + Recontatos
+            Últimos 30 Dias
           </span>
         </div>
 
@@ -57,7 +57,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
         </div>
 
         <div className="mt-1.5 flex items-center justify-between text-xs text-[#5A483E] pt-1.5 border-t border-[#F0E9E1]">
-          <span className="truncate text-[11px] font-semibold">59 orçamentos · 298 recontatos</span>
+          <span className="truncate text-[11px] font-semibold">59 orçamentos · 298 recontatos (30 dias)</span>
         </div>
       </div>
 
@@ -71,7 +71,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
             Ticket Médio (TM)
           </span>
           <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#F4EDE4] text-[#3D1F14] border border-[#DCD2C6]">
-            Últimos 30D
+            Últimos 30 Dias
           </span>
         </div>
 
@@ -83,7 +83,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
         </div>
 
         <div className="mt-1.5 flex items-center justify-between text-xs text-[#5A483E] pt-1.5 border-t border-[#F0E9E1]">
-          <span className="truncate text-[11px] font-semibold">13 vendas · R$ 296.793</span>
+          <span className="truncate text-[11px] font-semibold">13 vendas ganhas nos últimos 30 dias</span>
         </div>
       </div>
 
@@ -97,7 +97,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
             Tx. Fechamento · Hit Rate
           </span>
           <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#B89358] text-[#FFFFFF]">
-            Conversão
+            Últimos 30 Dias
           </span>
         </div>
 
@@ -109,7 +109,7 @@ export const KpiCards: React.FC<KpiCardsProps> = ({ kpi, onFilterStage }) => {
         </div>
 
         <div className="mt-1.5 flex items-center justify-between text-xs text-[#5A483E] pt-1.5 border-t border-[#F0E9E1]">
-          <span className="truncate text-[11px] font-semibold">454 entrada → 13 ganhos</span>
+          <span className="truncate text-[11px] font-semibold">Conversão global dos últimos 30 dias</span>
         </div>
       </div>
     </div>

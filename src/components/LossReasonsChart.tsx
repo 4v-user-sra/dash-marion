@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { PieChart as PieChartIcon } from 'lucide-react';
 import { ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
 import { LOSS_REASONS_DATA } from '../data/stagesData';
-import { formatCompactCurrency, formatCurrency } from '../utils/formatters';
+import { formatCurrency } from '../utils/formatters';
 
 interface LossReasonsChartProps {
   onSelectReason?: (reason: string) => void;
@@ -22,23 +22,23 @@ export const LossReasonsChart: React.FC<LossReasonsChartProps> = ({ onSelectReas
       {/* Header */}
       <div className="flex items-center justify-between pb-2 border-b border-[#F0E9E1] mb-2">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 rounded-md bg-[#181310] text-[#C9A96E] flex items-center justify-center font-black text-xs">
+          <div className="w-6 h-6 rounded-md bg-[#181310] text-[#C9A96E] flex items-center justify-center font-bold text-xs">
             <PieChartIcon className="w-3.5 h-3.5" />
           </div>
           <div>
-            <h3 className="text-sm font-extrabold text-[#181310] leading-none">
-              Motivos de Perda
+            <h3 className="text-sm font-bold text-[#181310] leading-none">
+              Motivos de Perda <span className="text-[#8C6D38] font-bold">· Últimos 30 Dias</span>
             </h3>
-            <span className="text-[10px] text-[#5A483E] uppercase tracking-wider font-bold">565 registros nos 30 dias</span>
+            <span className="text-[10px] text-[#5A483E] uppercase tracking-wider font-bold">565 registros nos Últimos 30 Dias</span>
           </div>
         </div>
 
         <span className="text-[11px] font-extrabold text-[#8C6D38] bg-[#F4EDE4] px-2.5 py-0.5 rounded border border-[#DCD2C6]">
-          R$ 2.5M perdido
+          R$ 2.5M perdido (30D)
         </span>
       </div>
 
-      {/* Quadrante Dividido SEM SCROLL - Todos os 8 motivos visíveis */}
+      {/* Quadrante Dividido */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-3 flex-1 items-center">
         {/* Lado Esquerdo: Todos os 8 motivos */}
         <div className="md:col-span-7 space-y-1">
@@ -115,7 +115,7 @@ export const LossReasonsChart: React.FC<LossReasonsChartProps> = ({ onSelectReas
             {/* Centro do Donut */}
             <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
               <span className="text-[9px] uppercase font-bold text-[#5A483E] tracking-wider leading-none">
-                Total
+                30 Dias
               </span>
               <span className="text-base font-black text-[#181310] leading-tight">
                 565
@@ -132,7 +132,7 @@ export const LossReasonsChart: React.FC<LossReasonsChartProps> = ({ onSelectReas
                 <span className="text-[#8C6D38] font-mono font-extrabold">{formatCurrency(activeData.value)}</span>
               </div>
               <p className="text-[10px] text-[#5A483E] mt-0.5 line-clamp-1 font-medium">
-                {activeData.description}
+                {activeData.description} (Últimos 30 Dias)
               </p>
             </div>
           )}
@@ -141,7 +141,7 @@ export const LossReasonsChart: React.FC<LossReasonsChartProps> = ({ onSelectReas
 
       {/* Footer */}
       <div className="pt-2 mt-2 border-t border-[#F0E9E1] flex items-center justify-between text-[11px] text-[#5A483E] font-bold">
-        <span>* Passe o cursor no gráfico para detalhar o valor</span>
+        <span>Período: Últimos 30 Dias</span>
         <span className="text-[#181310] font-extrabold">Sem retorno: 406 leads (R$ 1.08M)</span>
       </div>
     </div>

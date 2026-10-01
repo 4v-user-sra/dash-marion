@@ -26,14 +26,14 @@ export const SellersRanking: React.FC<SellersRankingProps> = ({
           </div>
           <div>
             <h3 className="text-sm font-bold text-[#181310] leading-none">
-              Ranking de Vendedores
+              Ranking de Vendedores <span className="text-[#8C6D38] font-bold">· Últimos 30 Dias</span>
             </h3>
-            <span className="text-[10px] text-[#5A483E] uppercase tracking-wider font-bold">Fechamentos nos 30 dias</span>
+            <span className="text-[10px] text-[#5A483E] uppercase tracking-wider font-bold">Fechamentos nos Últimos 30 Dias</span>
           </div>
         </div>
 
         <span className="text-[11px] font-extrabold text-[#8C6D38] bg-[#F4EDE4] px-2.5 py-0.5 rounded border border-[#DCD2C6] shrink-0">
-          Total: R$ 296.8k
+          Total: R$ 296.8k (30D)
         </span>
       </div>
 
@@ -67,7 +67,7 @@ export const SellersRanking: React.FC<SellersRankingProps> = ({
                       {seller.nickname}
                     </span>
                     <span className="text-[10px] text-[#5A483E] font-bold">
-                      {seller.dealsCount} vendas celebradas
+                      {seller.dealsCount} vendas nos últimos 30 dias
                     </span>
                   </div>
                 </div>
@@ -102,8 +102,9 @@ export const SellersRanking: React.FC<SellersRankingProps> = ({
       </div>
 
       {/* Footer */}
-      <div className="pt-2 border-t border-[#F0E9E1] flex items-center justify-end text-[11px] text-[#5A483E] font-bold shrink-0">
-        <span className="text-[#2A5C34] font-extrabold">13 contratos</span>
+      <div className="pt-2 border-t border-[#F0E9E1] flex items-center justify-between text-[11px] text-[#5A483E] font-bold shrink-0">
+        <span>Período: Últimos 30 Dias</span>
+        <span className="text-[#2A5C34] font-extrabold">13 contratos celebrados</span>
       </div>
     </div>
   );

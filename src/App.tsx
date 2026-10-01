@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { CheckCircle2 } from 'lucide-react';
+import { CheckCircle2, Calendar } from 'lucide-react';
 import { Lead, FunnelFilterState, StageId } from './types/funnel';
 import { initialMockLeads } from './data/mockLeads';
 import { 
@@ -20,8 +20,8 @@ import { LeadDetailModal } from './components/LeadDetailModal';
 import { NewLeadModal } from './components/NewLeadModal';
 import { VercelConfigModal } from './components/VercelConfigModal';
 
-const LEADS_STORAGE_KEY = 'apex_bi_editorial_leads_v9';
-const VERCEL_URL_STORAGE_KEY = 'apex_bi_vercel_screen_url_v9';
+const LEADS_STORAGE_KEY = 'apex_bi_editorial_leads_v10';
+const VERCEL_URL_STORAGE_KEY = 'apex_bi_vercel_screen_url_v10';
 const DEFAULT_VERCEL_URL = 'https://mansao-marion-funil-leads.vercel.app/';
 
 export default function App() {
@@ -166,6 +166,22 @@ export default function App() {
     <div className="min-h-screen bg-[#F8F5F0] flex flex-col text-[#181310] font-sans antialiased selection:bg-[#B89358] selection:text-[#FFFFFF]">
       {/* CORPO PRINCIPAL - CLEAN & COMPACTO */}
       <main className="flex-1 p-3 sm:p-4 max-w-[1720px] mx-auto w-full flex flex-col gap-3 sm:gap-4 justify-between">
+        {/* INDICAÇÃO DE CONTEXTO DO PERÍODO ANALISADO */}
+        <div className="flex items-center justify-between bg-[#FFFFFF] border border-[#DCD2C6] rounded-xl px-3.5 py-2 shadow-2xs">
+          <div className="flex items-center gap-2">
+            <div className="w-5 h-5 rounded-md bg-[#181310] text-[#C9A96E] flex items-center justify-center font-bold text-xs">
+              <Calendar className="w-3 h-3" />
+            </div>
+            <span className="text-xs font-bold text-[#181310]">
+              Período Analisado: <span className="text-[#8C6D38] font-extrabold">Últimos 30 Dias</span>
+            </span>
+          </div>
+
+          <div className="text-[11px] text-[#5A483E] font-bold hidden sm:block">
+            Dashboard Comercial · Mansão Marion · Consolidação de 454 leads & 13 contratos
+          </div>
+        </div>
+
         {/* TOPO: 4 CARDS DE INDICADORES (KPIs) */}
         <section aria-label="Indicadores Chave">
           <KpiCards

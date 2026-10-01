@@ -43,7 +43,7 @@ export const FunnelVisual: React.FC<FunnelVisualProps> = ({
           </div>
           <div>
             <h3 className="text-sm font-bold text-[#181310] leading-none">
-              Funil de Vendas <span className="text-[#8C6D38] font-bold">· 30 Dias</span>
+              Funil de Vendas <span className="text-[#8C6D38] font-bold">· Últimos 30 Dias</span>
             </h3>
           </div>
         </div>
@@ -134,7 +134,8 @@ export const FunnelVisual: React.FC<FunnelVisualProps> = ({
       </div>
 
       {/* Footer do Funil */}
-      <div className="pt-2 border-t border-[#F0E9E1] flex items-center justify-end text-[11px] text-[#5A483E] font-bold shrink-0">
+      <div className="pt-2 border-t border-[#F0E9E1] flex items-center justify-between text-[11px] text-[#5A483E] font-bold shrink-0">
+        <span className="text-[#8C6D38]">Período: Últimos 30 Dias</span>
         <span className="text-[#2A5C34] font-extrabold">13 Vendas Ganhas (R$ 296.8k)</span>
       </div>
     </div>

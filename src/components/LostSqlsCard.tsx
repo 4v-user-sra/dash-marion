@@ -27,17 +27,22 @@ export const LostSqlsCard: React.FC<LostSqlsCardProps> = ({
           </div>
           <div>
             <h3 className="text-sm font-bold text-[#181310] leading-none">
-              SQLs Perdidos <span className="text-[#8C6D38] font-bold">· Concorrência</span>
+              SQLs Perdidos <span className="text-[#8C6D38] font-bold">· Últimos 30 Dias</span>
             </h3>
+            <span className="text-[10px] text-[#5A483E] uppercase tracking-wider font-bold">Perdas para Concorrência</span>
           </div>
         </div>
+
+        <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#F4EDE4] text-[#8C6D38] border border-[#DCD2C6]">
+          Últimos 30 Dias
+        </span>
       </div>
 
       {/* Métricas Principais */}
       <div className="grid grid-cols-2 gap-2 mb-2">
         <div className="bg-[#FAF5EE] p-2.5 rounded-lg border border-[#DCD2C6]">
           <span className="text-[10px] uppercase tracking-wider font-bold text-[#5A483E] block">
-            Qtd. Perdida
+            Qtd. Perdida (30D)
           </span>
           <div className="flex items-baseline gap-1 mt-0.5">
             <span className="text-2xl font-black text-[#181310] tabular-nums">
@@ -49,7 +54,7 @@ export const LostSqlsCard: React.FC<LostSqlsCardProps> = ({
 
         <div className="bg-[#FAF5EE] p-2.5 rounded-lg border border-[#DCD2C6]">
           <span className="text-[10px] uppercase tracking-wider font-bold text-[#5A483E] block">
-            Valor Perdido
+            Valor Perdido (30D)
           </span>
           <div className="flex items-baseline gap-1 mt-0.5">
             <span className="text-2xl font-black text-[#8C6D38] tabular-nums">
@@ -89,8 +94,8 @@ export const LostSqlsCard: React.FC<LostSqlsCardProps> = ({
 
       {/* Footer */}
       <div className="pt-2 mt-2 border-t border-[#F0E9E1] flex items-center justify-between text-[11px] text-[#5A483E] font-bold">
-        <span>Ticket Médio Perdido</span>
-        <span className="text-[#181310] font-extrabold">{formatCompactCurrency(avgTicket)}</span>
+        <span>Período: Últimos 30 Dias</span>
+        <span className="text-[#181310] font-extrabold">TM: {formatCompactCurrency(avgTicket)}</span>
       </div>
     </div>
   );
